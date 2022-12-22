@@ -6,13 +6,25 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 09:43:46 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/20 17:32:53 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/22 11:25:19 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_character_in_set(char c, const char *set);
+static int	ft_character_in_set(char c, const char *set)
+{
+	int	indexset;
+
+	indexset = 0;
+	while (set[indexset])
+	{
+		if (set[indexset] == c)
+			return (1);
+		indexset++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -27,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[istart] && ft_character_in_set(s1[istart], set))
 		istart++;
 	if (istart == ft_strlen(s1))
-		return ("");
+		return (ft_strdup(""));
 	while (ft_character_in_set(s1[iend - 1], set))
 		iend--;
 	rstring = malloc((iend - istart + 1) * sizeof(char));
@@ -35,20 +47,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	ft_strlcpy(rstring, &s1[istart], (iend - istart + 1));
 	return (rstring);
-}
-
-int	ft_character_in_set(char c, const char *set)
-{
-	int	indexset;
-
-	indexset = 0;
-	while (set[indexset])
-	{
-		if (set[indexset] == c)
-			return (1);
-		indexset++;
-	}
-	return (0);
 }
 
 // #include <stdio.h>

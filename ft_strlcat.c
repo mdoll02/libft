@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 13:47:16 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/18 15:55:10 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/22 14:07:03 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t destsize)
 {
-	size_t	dst_size;
-	size_t	j;
+	size_t	len_dest;
+	size_t	i;
 	int		size;
 
-	dst_size = ft_strlen(dst);
-	j = 0;
-	size = dst_size + ft_strlen(src);
-	if (dst_size > destsize || destsize == 0)
+	len_dest = ft_strlen(dst);
+	i = 0;
+	size = len_dest + ft_strlen(src);
+	if (len_dest > destsize || destsize == 0)
 		return (destsize + ft_strlen(src));
-	while (dst_size < destsize - 1 && src[j])
+	while (len_dest < destsize - 1 && src[i])
 	{
-		dst[dst_size] = src[j];
-		dst_size++;
-		j++;
+		dst[len_dest] = src[i];
+		len_dest++;
+		i++;
 	}
-	dst[dst_size] = '\0';
+	dst[len_dest] = '\0';
 	return (size);
 }
 

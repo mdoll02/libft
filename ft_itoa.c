@@ -6,13 +6,13 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:21:25 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/20 11:19:09 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/22 11:26:54 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_getlen(int n)
+static int	ft_getlen(int n)
 {
 	int	len;
 
@@ -36,7 +36,7 @@ int	ft_getlen(int n)
 	return (len);
 }
 
-int	ft_negative(int *n, char *str, int len)
+static int	ft_negative(int *n, char *str, int len)
 {
 	if (*n < 0)
 	{

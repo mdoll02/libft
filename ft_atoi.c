@@ -6,14 +6,34 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:25:45 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/17 15:57:33 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/22 11:25:54 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_checkfirstdigit(char *str, int i);
-int	ft_checkwhitespaces(char *str, int i);
+static int	ft_checkwhitespaces(char *str, int i)
+{
+	if (str[i] == '\n' || str[i] == ' '
+		|| str[i] == '\t' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	{
+		return (1);
+	}
+	else
+		return (0);
+}
+
+static int	ft_checkfirstdigit(char *str, int i)
+{
+	if (str[i] == '-')
+		return (1);
+	else if (str[i] == '+')
+		return (2);
+	else if (str[i] > '9' || str[i] < '0')
+		return (-1);
+	else
+		return (0);
+}
 
 int	ft_atoi(const char	*str)
 {
@@ -42,29 +62,6 @@ int	ft_atoi(const char	*str)
 	if (isnegative == 1)
 		returnv *= -1;
 	return (returnv);
-}
-
-int	ft_checkwhitespaces(char *str, int i)
-{
-	if (str[i] == '\n' || str[i] == ' '
-		|| str[i] == '\t' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-	{
-		return (1);
-	}
-	else
-		return (0);
-}
-
-int	ft_checkfirstdigit(char *str, int i)
-{
-	if (str[i] == '-')
-		return (1);
-	else if (str[i] == '+')
-		return (2);
-	else if (str[i] > '9' || str[i] < '0')
-		return (-1);
-	else
-		return (0);
 }
 
 // int	main(void)

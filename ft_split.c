@@ -6,13 +6,14 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 09:39:06 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/21 11:37:59 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/22 14:05:16 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
+// is countting how many strings should be created
 int	ft_count_char(const char *s, char c)
 {
 	unsigned int	i;
@@ -40,47 +41,73 @@ int	ft_count_char(const char *s, char c)
 	return (count_c);
 }
 
-int	ft_count(char const *s, size_t i, char c)
+// skips the delimiter char(s) in s and counts the lenght of the string
+static void	ft_count(char const *s, char c, size_t *i_, size_t *len_)
 {
+	size_t	i;
+	size_t	len;
+
+	i = *i_;
+	len = *len_;
 	while (s[i] == c)
 		i++;
-	return (i);
+	len = i;
+	while (s[len] != c && s[len] != '\0')
+		len++;
+	*len_ = len;
+	*i_ = i;
 }
 
+// free the array if there is an error while using substr
+static char	**ft_free(char **sp_string)
+{
+	int	i;
+
+	i = 0;
+	while (sp_string[i])
+	{
+		free(sp_string[i]);
+		i++;
+	}
+	free(sp_string);
+	return (NULL);
+}
+
+// split the input string into multiple strings and 
+// returns them in a array of strings
 char	**ft_split(char const *s, char c)
 {
-	int				count_c;
 	size_t			i;
 	size_t			len;
 	char			**sp_string;
-	int				original_count_c;
+	int				index;
 
-	count_c = ft_count_char(s, c) + 1;
+	index = 0;
 	i = 0;
-	original_count_c = count_c;
-	sp_string = malloc (sizeof(char *) * (count_c + 1));
+	if (s == NULL)
+		return (NULL);
+	sp_string = malloc (sizeof(char *) * (ft_count_char(s, c) + 2));
 	if (sp_string == NULL)
 		return (NULL);
-	while (count_c-- > 0)
+	while (index < (ft_count_char(s, c) + 1))
 	{
-		i = ft_count(s, i, c);
-		len = i;
-		while (s[len] != c && s[len] != '\0')
-			len++;
-		*sp_string = ft_substr(s, i, len - i);
-		sp_string++;
+		ft_count(s, c, &i, &len);
+		sp_string[index] = ft_substr(s, i, len - i);
+		if (!sp_string[index])
+			return (ft_free(sp_string));
+		index++;
 		i = len;
 	}
-	*sp_string = NULL;
-	sp_string -= original_count_c;
+	sp_string[index] = NULL;
 	return (sp_string);
 }
 
 // int	main(void)
 // {
-// 	char	*str = "as          hj  dv   ad ";
-// 	char	c = ' ';
-// 	char	**rstring = ft_split(str, c);
+// 	char	*str = "ilbhewdibew weidlubwe dliweed we"
+// 	// char	c = ;
+
+// 	char	**rstring = ft_split(str, ' ');
 // 	int		i;
 
 // 	i = 0;
@@ -91,6 +118,7 @@ char	**ft_split(char const *s, char c)
 // 			printf("While loop entered\n");
 // 		printf("%s\n", rstring[i]);
 // 		i++;
-// 	}	
+// 	}
+// 	free (rstring);
 // 	return (0);
 // }
