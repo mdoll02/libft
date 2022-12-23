@@ -6,12 +6,13 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:24:57 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/22 14:08:13 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:06:15 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// returns the lenght of string s
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
@@ -21,11 +22,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	printf("normal funktion: %d\n", strlen(&*argv[1]));
-// 	printf("my funktion: %d\n", ft_strlen(&*argv[1]));
-
-// 	return (0);
-// }

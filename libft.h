@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:46:41 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/22 14:42:01 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 09:57:42 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,3 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 #endif
-
-//return von malloc char * typecasten ja oder nein?

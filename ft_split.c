@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 09:39:06 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/22 14:05:16 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:03:56 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 // is countting how many strings should be created
-int	ft_count_char(const char *s, char c)
+static int	ft_count_char(const char *s, char c)
 {
 	unsigned int	i;
 	int				count_c;
@@ -101,24 +101,3 @@ char	**ft_split(char const *s, char c)
 	sp_string[index] = NULL;
 	return (sp_string);
 }
-
-// int	main(void)
-// {
-// 	char	*str = "ilbhewdibew weidlubwe dliweed we"
-// 	// char	c = ;
-
-// 	char	**rstring = ft_split(str, ' ');
-// 	int		i;
-
-// 	i = 0;
-// 	printf("Inside main\n");
-// 	while (rstring[i] != NULL)
-// 	{
-// 		if (i == 0)
-// 			printf("While loop entered\n");
-// 		printf("%s\n", rstring[i]);
-// 		i++;
-// 	}
-// 	free (rstring);
-// 	return (0);
-// }

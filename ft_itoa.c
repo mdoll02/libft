@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:21:25 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/22 11:26:54 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:01:34 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ static int	ft_getlen(int n)
 	return (len);
 }
 
+// checks if the input integer is negative, puts a '-' as first character
+// and converts it to a positve number
 static int	ft_negative(int *n, char *str, int len)
 {
 	if (*n < 0)
@@ -52,6 +54,7 @@ static int	ft_negative(int *n, char *str, int len)
 	return (len);
 }
 
+// converts a integer to string
 char	*ft_itoa(int n)
 {
 	int		len;
@@ -73,16 +76,3 @@ char	*ft_itoa(int n)
 	}
 	return (istring);
 }
-
-// #include "stdio.h"
-
-// int	main(void)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	printf("Is: 		%s\n", ft_itoa(i));
-// 	printf("Should be:	%d\n", i);
-// 	printf("Length:		%lu\n", ft_strlen(ft_itoa(i)));
-// 	return (0);
-// }

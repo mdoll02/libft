@@ -6,12 +6,13 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:25:45 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/22 11:25:54 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 09:59:04 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// checks if the current char is a "whitespace" and return 1 if true
 static int	ft_checkwhitespaces(char *str, int i)
 {
 	if (str[i] == '\n' || str[i] == ' '
@@ -23,6 +24,8 @@ static int	ft_checkwhitespaces(char *str, int i)
 		return (0);
 }
 
+// checks the first digit of the code. return 1 --> '-', 2 --> '+',
+// -1 --> not a digit, 0 --> digit
 static int	ft_checkfirstdigit(char *str, int i)
 {
 	if (str[i] == '-')
@@ -35,6 +38,7 @@ static int	ft_checkfirstdigit(char *str, int i)
 		return (0);
 }
 
+// tackes a string and converts the string to a integer
 int	ft_atoi(const char	*str)
 {
 	int		i;
@@ -63,15 +67,3 @@ int	ft_atoi(const char	*str)
 		returnv *= -1;
 	return (returnv);
 }
-
-// int	main(void)
-// {
-// 	char	*str = "\t\v\f\r\n \f-06050";
-// 	char	*str2 = "-s50";
-
-// 	printf("%d\n", atoi(str));
-// 	printf("%d\n", ft_atoi(str));
-// 	printf("%d\n", atoi(str2));
-// 	printf("%d\n", ft_atoi(str2));
-// 	return (0);
-// }

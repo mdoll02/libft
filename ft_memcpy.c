@@ -6,12 +6,13 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:14:08 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/17 12:00:13 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:02:27 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// copies n bytes from src to dst. If they overlap behavior is undefined
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*f_src;
@@ -30,21 +31,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// int	main(void)
-// {
-// 	char src[50] = "Hello";
-// 	char dest[15] = "World";
-// 	char src2[50] = "Hello";
-// 	char dest2[15] = "World";
-
-// 	printf("Both Strings before:\n Source: %s	", src);
-// 	printf("Destination: %s\n", dest);
-// 	//memcpy(dest, src, 20);
-// 	printf("%s\n", dest);
-
-// 	printf("Both Strings before:\n Source: %s	", src2);
-// 	printf("Destination: %s\n", dest2);
-// 	ft_memcpy(dest2, src2, 20);
-// 	printf("%s\n", dest2);
-// }

@@ -6,12 +6,13 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:06:27 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/21 22:32:55 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:02:47 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// copies len bytes from src to dst. they may overlap
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
@@ -31,25 +32,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-// int	main(void)
-// {
-// 	char	str[30] = "Test String for Memmove";
-// 	char	str2[30] = "Test String for Memmove";
-
-// 	printf("Original Text: \t%s\n", str);
-// 	printf("Source: \t%s\n", str + 4);
-// 	printf("Destination: \t%s\n", str + 7);
-
-// 	//printf("%s\n", ft_memmove(str + 7, str + 5, 10));
-// 	ft_memmove(str + 7, str + 5, 17);
-// 	printf("Result of my function: \t%s\n\n", str);
-
-// 	printf("Original Text: \t%s\n", str2);
-// 	printf("Source: \t%s\n", str2 + 4);
-// 	printf("Destination: \t%s\n", str2 + 7);
-
-// 	//printf("%s\n", memmove(str + 7, str + 5, 10));
-// 	memmove(str + 7, str + 5, 17);
-// 	printf("original funktion: \t%s\n", str2);
-// }

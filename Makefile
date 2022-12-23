@@ -6,7 +6,7 @@
 #    By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 10:22:36 by mdoll             #+#    #+#              #
-#    Updated: 2022/12/20 12:02:43 by mdoll            ###   ########.fr        #
+#    Updated: 2022/12/22 15:11:57 by mdoll            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,14 +19,13 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft
 
 OBJS = $(SRC:.c=.o)
 
-CC = gcc
-
 CFLAGS = -Wall -Wextra -Werror
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
+
+$(NAME): $(OBJS)
+	gcc $(CFLAGS) -c $(SRC) && ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f *.o

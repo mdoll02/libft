@@ -6,12 +6,13 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:07:19 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/14 12:09:17 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:00:04 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// ckecks if char is alpha-numeric
 int	ft_isalnum(int c)
 {
 	unsigned char	chr;
@@ -24,50 +25,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = '0';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = '9';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = '5';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = 'a';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = '?';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = '0';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = '9';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = '5';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = 'a';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	c = '?';
-// 	printf("%d\n", isalnum(c));
-// 	printf("FT: %d\n", ft_isalnum(c));
-
-// 	return (0);
-// }

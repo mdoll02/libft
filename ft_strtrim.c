@@ -6,12 +6,13 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 09:43:46 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/22 11:25:19 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:07:48 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// will check if the char is in set
 static int	ft_character_in_set(char c, const char *set)
 {
 	int	indexset;
@@ -26,6 +27,7 @@ static int	ft_character_in_set(char c, const char *set)
 	return (0);
 }
 
+// will remove every character in set from the front and back from s1
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char				*rstring;
@@ -48,15 +50,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(rstring, &s1[istart], (iend - istart + 1));
 	return (rstring);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*str = "";
-// 	char	*set = "";
-
-// 	printf("%s\n", ft_strdup(str));
-// 	printf("%s\n", ft_strtrim(str, set));
-// 	return (0);
-// }

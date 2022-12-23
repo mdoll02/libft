@@ -6,12 +6,14 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 10:44:34 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/21 16:12:45 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:08:01 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// will create a substring from s that starts at "start" and is
+// maximum "len" long
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
@@ -26,14 +28,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
-
-// int	main(void)
-// {
-// 	char	*str = "sad";
-// 	size_t	size = 1;
-// 	char	*rstring = ft_substr(str, -1, size);
-
-// 	printf("%s\n", rstring);
-// 	free(rstring);
-// 	return (0);
-// }

@@ -6,12 +6,14 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:57:28 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/17 12:54:27 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:06:47 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// compares s1 and s2 and return 1 if char at s1[i] > char s2[i].
+// -1 if the other way around, 0 if they are the same.
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;
@@ -31,28 +33,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	*str1 = "aaaaaab";
-// 	char	*str2 = "aaaaaaa";
-// 	char	*str3 = "aaaa";
-// 	char	*str4 = "aaaa";
-
-// 	printf("all chars: %d\n", ft_strncmp(str1, str2, 7));
-// 	printf("all chars: %d\n", strncmp(str1, str2, 7));
-// 	printf("more chars: %d\n", ft_strncmp(str1, str2, 10));
-// 	printf("more chars: %d\n", strncmp(str1, str2, 10));
-// 	printf("less chars: %d\n", ft_strncmp(str1, str2, 4));
-// 	printf("less chars: %d\n", strncmp(str1, str2, 4));
-// 	printf("no chars: %d\n", ft_strncmp(str1, str2, 0));
-// 	printf("no chars: %d\n", strncmp(str1, str2, 0));
-
-// 	printf("%d\n", ft_strncmp(str3, str4, 7));
-// 	printf("%d\n", strncmp(str3, str4, 7));
-
-// 	printf("%d\n", ft_strncmp("test\200", "test\0", 6));
-// 	printf("%d\n", strncmp("test\200", "test\0", 6));
-
-// 	return (0);
-// }

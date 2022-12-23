@@ -6,20 +6,16 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:10:32 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/14 12:11:48 by mdoll            ###   ########.fr       */
+/*   Updated: 2022/12/23 10:08:28 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// changes c to uppercase character
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		c = c - 32;
 	return (c);
 }
-
-// int	main(void)
-// {
-// 	printf("%c\n", ft_toupper('g'));
-// }
