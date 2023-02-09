@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 13:48:34 by mdoll             #+#    #+#             */
-/*   Updated: 2023/01/31 12:32:06 by mdoll            ###   ########.fr       */
+/*   Updated: 2023/02/09 10:10:43 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stddef.h>
-# include "../libft.h"
+# include "./libft.h"
 
 int	ft_printf(const char	*str, ...);
 int	pchar(int c);

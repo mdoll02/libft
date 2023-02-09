@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:46:41 by mdoll             #+#    #+#             */
-/*   Updated: 2023/01/31 12:36:54 by mdoll            ###   ########.fr       */
+/*   Updated: 2023/02/09 10:10:31 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "./printf/ft_printf.h"
-# include "./gnl/get_next_line_bonus.h"
+# include "./ft_printf.h"
+# include "./get_next_line_bonus.h"
 
 int		ft_atoi(const char	*str);
 void	ft_bzero(void *s, size_t n);
