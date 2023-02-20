@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:25:45 by mdoll             #+#    #+#             */
-/*   Updated: 2022/12/23 09:59:04 by mdoll            ###   ########.fr       */
+/*   Updated: 2023/02/20 13:10:17 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ static int	ft_checkfirstdigit(char *str, int i)
 }
 
 // tackes a string and converts the string to a integer
-int	ft_atoi(const char	*str)
+long	ft_atoi(const char	*str)
 {
 	int		i;
-	int		returnv;
+	long	returnv;
 	int		isnegative;
 	char	*s;
 

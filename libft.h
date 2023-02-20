@@ -6,7 +6,7 @@
 /*   By: mdoll <mdoll@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:46:41 by mdoll             #+#    #+#             */
-/*   Updated: 2023/02/09 10:10:31 by mdoll            ###   ########.fr       */
+/*   Updated: 2023/02/20 13:10:30 by mdoll            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "./ft_printf.h"
 # include "./get_next_line_bonus.h"
 
-int		ft_atoi(const char	*str);
+long	ft_atoi(const char	*str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
